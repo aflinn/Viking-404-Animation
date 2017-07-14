@@ -1,0 +1,532 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  background: #003f87;
+}
+
+P {
+	text-align:left;
+	font-family: "Muli";
+	font-size:calc(5% + 2vw);
+	font-weight:500;
+	line-height: 2em;
+	color:#fff;
+	line-height:1em;
+}
+
+#fog {
+    z-index:2;
+    position: fixed;
+    top: 1vw;
+}
+
+svg.vikingship{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:1;
+}
+
+
+/*
+==============================================
+WORDS
+==============================================
+*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2em; 
+  font-family: "Muli", sans-serif;
+  color: #fff;
+   background: #003f87;
+}
+
+.wrapper-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  top: 32vw;
+}
+
+.wrapper-1 > * {
+  padding: 0px;
+  flex: 1 100%;
+}
+
+.wrapper-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: column wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+}
+
+.wrapper-2 > * {
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+.main {
+  flex:0;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0px 20px;
+}
+
+.logo {
+  padding:0px 20px;
+  flex:0;
+}
+
+p.title {
+  text-transform: uppercase;
+  font-weight:800;
+  line-height:0em;
+  white-space: nowrap;}
+
+p.subtitle {
+  text-transform: uppercase;
+  font-size: 27px;
+  line-height:.5em;
+  white-space: nowrap;
+}
+
+
+/* SEARCH BAR */
+.bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.search {
+    /* take up the rest of the remaining space */
+  flex: 1;
+}
+
+.search-input {
+  width:100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.search-input input#search {
+  height: 50px;
+  background: #99cdef;
+  border: none;
+  font-size: 16pt;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Muli";
+  white-space: nowrap;
+  width: 175px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.search-input input#search:focus {
+    background: white;
+    width: 75%;
+    max-width: 785px;
+}
+
+.search-input input#search::-webkit-input-placeholder {
+    width: 90%;
+    max-width: 785px;
+   color: #444;
+}
+ 
+.search-input input#search:-moz-placeholder { /* Firefox 18- */
+   color: #444; 
+    width: 90%;
+    max-width: 785px;
+}
+ 
+.search-input input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #444;  
+    width: 90%;
+    max-width: 785px;
+}
+ 
+.searchinput input#search:-ms-input-placeholder { 
+   color: #444; 
+    width: 90%;
+    max-width: 785px;
+}
+
+span.icon {
+  position: absolute;
+  margin-left: 16px;
+  margin-top: 14px;
+  z-index: 80;
+  color: #444;
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* LINKS */
+.links {
+  padding: 20px;
+  line-height: 1em;
+  color: #33659f;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+a {
+  text-decoration:none;
+  color: #fff;
+  padding: 8px;
+}
+
+/*
+==============================================
+MOBILE RULES
+==============================================
+*/
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-device-width:600px){
+  .logo {flex: 1;}
+   .main {flex:1;}
+}
+
+@media all and (min-width: 800px) and (max-device-width: 800px){
+  .main { flex: 0;}
+  .logo { flex: 0;
+	order: 1; } 
+  .main { order: 2; }
+  .searchbar {order:3;}
+  .links  { order: 4; }
+}
+
+@media screen and (max-width: 420px) and (max-device-width: 420px){
+   a {font-size: 30px;}
+   .logo {flex: 1;}
+   .main {flex:1;}
+}
+
+@media screen and (min-width: 320px) and (min-device-width: 320px){
+  p.title {
+    font-size: calc(36px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 500px) and (min-device-width: 500px){
+  p.title {
+    font-size: 56px;
+  }
+}
+
+@media screen and (min-width: 320px) and (min-device-width : 320px) and (max-device-width : 480px){
+  p.subtitle {
+    font-size: calc(17px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 500px) and and (min-device-width: 500px){
+  p.subtitle {
+    font-size: 27px;
+  }
+}
+
+/*
+==============================================
+ANIMATIONS
+==============================================
+/* Boat times */
+
+#tossingboat{
+	animation-name: tossingboat;
+	-webkit-animation-name: tossingboat;	
+  transform-origin: 50% 50%;
+	animation-duration: 6s;	
+	-webkit-animation-duration: 6s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes tossingboat {
+	0% {
+		transform: rotate(-4deg);	
+	}
+	40% {
+		transform: rotate(4deg);	
+	}		
+	100% {
+		transform: rotate(-4deg);	
+	}	
+}
+
+@-webkit-keyframes .tossingboat {
+	0% {
+		-webkit-transform: rotate(-4deg);	
+	}
+	50% {
+		-webkit-transform: rotate(4deg);
+	}
+	100% {
+		-webkit-transform: rotate(-4deg);	
+	}				
+}
+
+/* Boat waves */
+#rockingwaves{
+	animation-name: rockingwaves;
+	-webkit-animation-name: rockingwaves;	
+  transform-origin: 50% 50%;
+	animation-duration: 6s;	
+	-webkit-animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  -webkit-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes rockingwaves {
+	0% {
+		transform: rotate(-2.5deg);	
+	}
+	40% {
+		transform: rotate(2.5deg);	
+	}		
+	100% {
+		transform: rotate(-2.5deg);	
+	}	
+}
+
+@-webkit-keyframes rockingwaves {
+	0% {
+		-webkit-transform: rotate(-2.5deg);	
+	}
+	50% {
+		-webkit-transform: rotate(2.5deg);
+	}
+	100% {
+		-webkit-transform: rotate(-2.5deg);	
+	}				
+}
+
+/* Fog times */
+#fog{
+	animation-name: fog;
+	-webkit-animation-name: fog;
+  	-moz-animation-name: fog;
+
+	animation-duration: 60s;	
+	-webkit-animation-duration: 60s;
+	-moz-animation-duration: 60s;	
+  
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+  	-moz-animation-iteration-count: infinite;
+	
+	animation-direction: normal;
+	-webkit-animation-direction: normal;
+  	-moz-animation-direction: normal;
+	
+	animation-timing-function: linear;
+  	-webkit-timing-function: linear;
+}
+
+@keyframes fog {
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3) rotate(4deg);
+  }
+  
+  50% {
+    opacity: .7;
+    transform: scale(1.5) rotate(-5deg) translate3d(-2000px, -15px, -15px);
+  }
+	
+  100% {
+    opacity: 0;
+    transform: scale(2.3) rotate(5deg) translate3d(-3700px, -15px, -15px);
+  }
+  }
+
+@-webkit-keyframes fog {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3) rotate(4deg);
+  }
+  
+  50% {
+    opacity: .7;
+    -webkit-transform: scale(1.5) rotate(-5deg) translate3d(-2000px, -15px, -15px);
+  }
+	
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.3) rotate(5deg) translate3d(-3700px, -15px, -15px);
+  }
+  }
+
+@-moz-keyframes fog {
+ 0% {
+    opacity: 0;
+    -moz-transform: scale3d(.3, .3, .3) rotate(4deg);
+  }
+  
+  50% {
+    opacity: .7;
+    -moz-transform: scale(1.5) rotate(-5deg) translate3d(-2000px, -15px, -15px);
+  }
+	
+  100% {
+    opacity: 0;
+    -moz-transform: scale(2.3) rotate(5deg) translate3d(-3700px, -15px, -15px);
+  }
+  }
+
+
+/* Big Waves */
+#over_waves {
+	animation-name: wave;
+	-webkit-animation-name: wave;
+  transform-origin: 50% 50%;
+	animation-duration: 6s;
+	-webkit-animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes wave{
+	0% {
+		transform: rotate(1.1deg);	
+	}
+	50% {
+		transform: rotate(-1.1deg);
+	}
+	100% {
+		transform: rotate(1.1deg);	
+	}				
+}
+
+@-webkit-keyframes wave{
+	0% {
+		-webkit-transform: rotate(1.1deg);
+	}
+	50% {
+		-webkit-transform: rotate(-1.1deg);
+	}
+	100% {
+		-webkit-transform: rotate(1.1deg);
+	}				
+}
+
+/* Back Rock Waves */
+#backrock_waves {
+	animation-name: backnforth;
+	-webkit-animation-name: backnforth;
+  transform-origin: 50% 50%;
+	animation-duration: 30s;
+	-webkit-animation-duration: 30s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes backnforth{
+	from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-30px, -1px, -1px);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(30px, 1px, 1px);
+  }
+}
+
+@-webkit-keyframes backnforth{
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		-webkit-transform: translate3d(-30px, 0, 0);
+	}
+	 20%, 40%, 60%, 80% {
+		-webkit-transform: translate3d(30px, 0, 0);
+	}				
+}
