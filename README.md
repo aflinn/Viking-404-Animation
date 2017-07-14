@@ -7,7 +7,7 @@ Preview of finished site currently (2017-07-17) located at: (http://test.aflinn.
 
 ## Built With
 
-* [CodePen](http://www.dropwizard.io/1.0.2/docs/) - Used to quickly test stuff, code snippets, and for inspiration
+* [CodePen](https://codepen.io/pens/) - Used to quickly test stuff, code snippets, and for inspiration
 * [Brackets](http://brackets.io/) - Text editor
 * [SVGOMG](https://jakearchibald.github.io/svgomg/) - Used to tidy up all the SVGs
 * [Adobe Illustrator](http://www.adobe.com/products/illustrator.html) - Used for designing layout, creating the SVGs, and creating the fog effect
