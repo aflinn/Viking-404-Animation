@@ -8,7 +8,7 @@ body, html {
 
 P {
 	text-align:left;
-	font-family: "Muli";
+	font-family: 'Muli', sans-serif;
 	font-size:calc(5% + 2vw);
 	font-weight:500;
 	line-height: 2em;
@@ -46,7 +46,7 @@ html {
 
 body {
   padding: 2em; 
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   color: #fff;
    background: #003f87;
 }
@@ -151,7 +151,7 @@ p.subtitle {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   white-space: nowrap;
   width: 175px;
     -webkit-transition: width 0.4s ease-in-out;
